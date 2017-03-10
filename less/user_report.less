@@ -1,0 +1,801 @@
+@import "import/reset.less";
+@baseUrl:'../images/user_report';
+@fs:100rem;
+html,body{
+  position: relative;
+  height: 100%;
+}
+body{
+  background-color:#000;
+  .backgroundImg(#000,"@{baseUrl}/user_report_bg.png",100%);
+}
+
+.clear{
+  zoom:1;
+}
+.clear:after{
+  display: block;
+  content:"";
+  clear:both;
+}
+
+.backgroundImg(@color:'',@img:'',@size:100%){
+  background-color: @color;
+  background-image:url(@img);
+  background-repeat: no-repeat;
+  background-size:@size;
+}
+
+.fontSize(@size:24/@fs,@color:'',@lineHeight:1){
+  font-size:@size;
+  color:@color;
+  line-height: @lineHeight;
+}
+
+
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+
+// 分页按钮颜色
+.swiper-pagination{
+  span.swiper-pagination-bullet{
+    background-color:#3f3d42;
+    opacity:1;
+  }
+  span.swiper-pagination-bullet-active{
+    background-color:#a03a32;
+  }
+}
+// 设置每页背景
+.swiper-slide{
+  width:100%;
+  height:100%;
+  box-sizing: border-box;
+  line-height: 1;
+  color:#fff;
+  padding-top:6%;
+  overflow: hidden;
+}
+
+
+
+// 第一页
+.slide-1{
+  .slide-1-header{
+    width:571/@fs;
+    height:131/@fs;
+    margin:0 auto;
+    position:relative;
+    .backgroundImg('',"@{baseUrl}/user_report_1_01.png",100%);
+    p{
+      .fontSize(26/@fs,#fff);
+      position:absolute;
+      bottom:-10/@fs;
+      left:50%;
+      transform:translate3d(-50%,0,0);
+      text-shadow:#a03a32 2/@fs 0 4/@fs,#a03a32 0 2/@fs 4/@fs,#a03a32 -2/@fs 0 4/@fs,#a03a32 0 -2/@fs 4/@fs;  
+      -moz-text-shadow:#a03a32 2/@fs 0 4/@fs,#a03a32 0 2/@fs 4/@fs,#a03a32 -2/@fs 0 4/@fs,#a03a32 0 -2/@fs 4/@fs;  
+      text-shadow:#a03a32 2/@fs 0 4/@fs,#a03a32 0 2/@fs 4/@fs,#a03a32 -2/@fs 0 4/@fs,#a03a32 0 -2/@fs 4/@fs;   
+      *filter: Glow(Color=#a03a32, Strength=1);
+    }
+  }
+  .slide-1-portrait{
+    width:647/@fs;
+    height:647/@fs;
+    margin:5% auto 0;
+    position:relative;
+    .circle1{
+      position:absolute;
+      top:0;
+      width:647/@fs;
+      animation:turn 20s infinite linear;
+    }
+    .circle2{
+      position:absolute;
+      top:0;
+      width:465/@fs;
+      top:50%;
+      left:50%;
+      margin-top:-232.5/@fs;
+      margin-left:-232.5/@fs;
+      animation:turn2 16s infinite linear;
+    }
+    .circle3{
+      position:absolute;
+      top:0;
+      width:315/@fs;
+      top:50%;
+      left:50%;
+      margin-top:-157.5/@fs;
+      margin-left:-157.5/@fs;
+      animation:turn 12s infinite linear;
+    }
+    .upPortrait{
+      width:140/@fs;
+      height:50/@fs;
+      position:absolute;
+      top:420/@fs;
+      left:50%;
+      margin-left:-70/@fs;
+      p{
+        border:1/@fs #fff solid;
+        border-radius:8/@fs;
+        width:140/@fs;
+        height:50/@fs;
+        text-align: center;
+        .fontSize(24/@fs,#fff,50/@fs);
+      }
+      input{
+        width:100%;
+        height:100%;
+        opacity: 0;
+        position: absolute;
+        top:0;
+      }
+    }
+    .portrait{
+      position: absolute;
+      left:50%;
+      top:50%;
+      margin-top:-83/@fs;
+      margin-left:-83/@fs;
+      width:166/@fs;
+      height:166/@fs;
+      border-radius:50%;
+      overflow: hidden;
+      img{
+        width:166/@fs;
+        height:166/@fs;     
+      }
+    }
+  }
+  .slide-1-footer{
+    margin-top:5%;
+    p{
+      .fontSize(30/@fs,#fff);
+      text-align: center;
+      span{
+        .fontSize(68/@fs,#ff5a45);
+      }
+    }
+    p.date{
+      margin-top:5%;
+    }
+  }
+}
+
+// 第二页
+.slide-2{
+  .slide-2-header{
+    width:322/@fs;
+    height:51/@fs;
+    margin:0 auto;
+    position:relative;
+    .backgroundImg('',"@{baseUrl}/user_report_2_01.png",100%);
+  }
+  dl{
+    dt{
+      text-align: center;
+      margin:20/@fs 0 10/@fs;
+      img{
+        width:30/@fs;
+        vertical-align: middle;
+      }
+      span{
+        font-size:30/@fs;
+        margin-left:10/@fs;
+        vertical-align: middle;
+      }
+    }
+    dd{
+      width:568/@fs;
+      height:157/@fs;
+      margin:0 auto;
+      font-size:24/@fs;
+      color:#fff;
+      text-align: center;
+      box-sizing: border-box;
+      padding-top:24/@fs;
+      .backgroundImg('',"@{baseUrl}/user_report_2_03.png",100%);
+      p span{
+        color:#ff5a45;
+      }
+      p.number{
+        margin-bottom:22/@fs;
+        span{
+          font-size:46/@fs;
+        }
+      }
+    }
+    dd.one{
+      padding:0;
+      line-height: 157/@fs;
+    }
+    dt.money{
+      margin:30/@fs 0 10/@fs;
+    }
+  }
+  p.slide-2-footer{
+    font-size:24/@fs;
+    color:#999;
+    text-align:center;
+    margin-top:30/@fs;
+  }
+}
+
+// 第三页
+.slide-3{
+  .slide-3-header{
+    width:322/@fs;
+    height:58/@fs;
+    margin:0 auto;
+    position:relative;
+    .backgroundImg('',"@{baseUrl}/user_report_3_01.png",100%);
+  }
+  .slide-3-main{
+    width:638/@fs;
+    height:638/@fs;
+    margin:28/@fs auto 0;
+    position:relative;
+    margin:10/@fs auto 0;
+    .pieBg{
+      width:100%;
+      height:100%;
+      .backgroundImg('',"@{baseUrl}/user_report_3_02.png",100%);
+      opacity: 0.3;
+      animation:explicitImplicit 4s infinite linear;
+    }
+    #pie{
+      width:300/@fs;
+      height:300/@fs;
+      position:absolute;
+      top:50%;
+      left:50%;
+      margin-top:-150/@fs;
+      margin-left:-150/@fs;
+    }
+  }  
+  .slide-3-data{
+    width:569/@fs;
+    margin:0 auto;
+    div{
+      float:left;
+      width:189.5/@fs;
+      height:100/@fs;
+      font-size:24/@fs;
+      text-align: center;
+      span{
+        display: block;
+        width:66/@fs;
+        height:12/@fs;
+        border-radius:6/@fs;
+        margin:0 auto 21/@fs;
+      }
+      p.p2{
+        color:#ff5a45;
+        margin-top:11/@fs;
+      }
+    }
+    div.L{
+      span{
+        background-color:#ffe7e4;
+      }      
+    }
+    div.M{
+      span{
+        background-color:#ffa296;
+      }     
+    }
+    div.R{
+      span{
+        background-color:#ff5a45;
+      }     
+    }
+  }
+  .slide-3-footer{
+    width:566/@fs;
+    height:215/@fs;
+    margin:10/@fs auto 0;
+    box-sizing: border-box;
+    padding-top:46/@fs;
+    text-align: center;
+    .backgroundImg('',"@{baseUrl}/user_report_3_03.png",100%);
+    h1{
+      font-size:34/@fs;
+    }
+    p{
+      font-size:30/@fs;
+      margin-top:36/@fs;
+    }
+  }
+}
+
+// 第四页
+.slide-4{
+  padding:0;
+  .slide-4-1{
+    width:100%;
+    height:100%;
+    box-sizing: border-box;
+    padding-top:6%;
+    .slide-4-1-header{
+      width:308/@fs;
+      height:67/@fs;
+      margin:0 auto;
+      position:relative;
+      .backgroundImg('',"@{baseUrl}/user_report_4_01.png",100%);
+    }
+    .slide-4-1-sum{
+      width:566/@fs;
+      height:165/@fs;
+      margin:20/@fs auto 0;
+      text-align: center;
+      padding-top:42/@fs;
+      font-size:30/@fs;
+      box-sizing: border-box;
+      display: block;
+      .backgroundImg('',"@{baseUrl}/user_report_4_02.png",100%);
+      p{
+        span{
+          color:#ff5a45;
+        }
+      }
+      p.money{
+        margin-bottom:24/@fs;
+      }
+    }
+    .slide-4-1-status{
+      width:462/@fs;
+      height:175/@fs;
+      margin:20/@fs auto 0;
+      position:relative;
+      .now{
+        width:142/@fs;
+        height:auto;   
+        position:absolute;
+        left:0;   
+        .backgroundImg('',"@{baseUrl}/user_report_4_05.png",100%);
+        div{
+          width:142/@fs;
+          height:101/@fs;
+          position: relative;
+          img{
+            width:102/@fs;
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin-top:-28/@fs;
+            margin-left:-51/@fs;
+          }
+        }
+        p{
+          width:108/@fs;
+          height:44/@fs;
+          margin:26/@fs auto 0;
+          text-align: center;
+          line-height: 44/@fs;
+          .backgroundImg('',"@{baseUrl}/user_report_4_07.png",100%);
+        }
+      }
+      .progress{
+        width:196/@fs;
+        height:3/@fs;
+        background-color:#333;
+        position:absolute;
+        top:48/@fs;
+        left:50%;
+        margin-left:-98/@fs; 
+        .progress-bar{
+          width:0;
+          height:3/@fs;
+          background-color:#ff5a45;
+          position: relative;
+          z-index:8;
+          span{
+            display: block;
+            width:12/@fs;
+            height:12/@fs;
+            border-radius:50%;
+            background-color: #ff5a45;
+            position:absolute;
+            right:-6/@fs;
+            top:50%;
+            margin-top:-6/@fs;
+          }
+        }
+        p{
+          text-align: center;
+          font-size:24/@fs;
+          color:#ff5a45;
+          margin-top:18/@fs;
+        }
+      }
+      .target{
+        width:142/@fs;
+        height:auto;  
+        position:absolute;
+        right:0;       
+        .backgroundImg('',"@{baseUrl}/user_report_4_04.png",100%);
+        div{
+          width:142/@fs;
+          height:101/@fs;
+          position: relative;
+          img{
+            width:102/@fs;
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin-top:-28/@fs;
+            margin-left:-51/@fs;
+          }
+        }
+        p{
+          width:108/@fs;
+          height:44/@fs;
+          margin:26/@fs auto 0;
+          text-align: center;
+          line-height: 44/@fs;
+          .backgroundImg('',"@{baseUrl}/user_report_4_06.png",100%);
+        }
+      }
+    }
+    .slide-4-1-footer{
+      width:568/@fs;
+      height:626/@fs;
+      margin:20/@fs auto 0;
+      box-sizing: border-box;
+      padding:6/@fs;
+      .backgroundImg('',"@{baseUrl}/user_report_4_19.png",100%);
+      table{
+        width:100%;
+        tr{
+          text-align: center;
+          td{
+            height:122/@fs;
+            padding:20/@fs;
+            box-sizing: border-box;
+            text-align:left;
+            line-height: 1.1;
+            span{
+              color:#ff5a45;
+            }
+          }
+          td.icon{
+            padding-left:40/@fs;
+            img{
+              width:32/@fs;
+            }
+          }
+          td.arrows{
+            img{
+              width:26/@fs;
+            }
+          }
+          td.last{
+            padding-right:40/@fs;
+          }
+        }
+      }
+    }
+  }
+  .slide-4-2{
+    width:100%;
+    height:100%;
+    box-sizing: border-box;
+    padding-top:6%;
+    .slide-4-2-header{
+      width:308/@fs;
+      height:67/@fs;
+      margin:0 auto;
+      position:relative;
+      .backgroundImg('',"@{baseUrl}/user_report_4_01.png",100%);
+    }
+    .slide-4-2-status{
+      width:568/@fs;
+      height:560/@fs;
+      position:absolute;
+      top:10/@fs;
+      left:50%;
+      margin-left:-284/@fs;
+      .statusBg{
+        width:100%;
+        height:100%;
+        .backgroundImg('',"@{baseUrl}/user_report_4_22.png",100%);
+        opacity: 0.3;
+        animation:explicitImplicit 4s infinite linear;
+      }
+      .status{
+        width:308/@fs;
+        height:276/@fs;
+        position:absolute;
+        left:50%;
+        top:25%;
+        margin-left:-154/@fs;
+        div{
+          width:308/@fs;
+          height:207/@fs;
+          position:relative;
+          .backgroundImg('',"@{baseUrl}/user_report_4_18.png",100%);
+          img{
+            width:244/@fs;
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin-top:-80/@fs;
+            margin-left:-122/@fs;
+          }
+        }
+        p{
+          width:114/@fs;
+          height:50/@fs;
+          margin:20/@fs auto 0;
+          .backgroundImg('',"@{baseUrl}/user_report_4_21.png",100%);
+          text-align: center;
+          line-height: 50/@fs;
+          color:#ff5a45;
+        }
+      }
+    }
+    .slide-4-2-footer{
+      width:568/@fs;
+      height:626/@fs;
+      margin:330/@fs auto 0;
+      position:relative;
+      z-index:10;
+      box-sizing: border-box;
+      padding:6/@fs;
+      .backgroundImg('',"@{baseUrl}/user_report_4_19.png",100%);
+      table{
+        width:100%;
+        font-size:28/@fs;
+        tr{
+          td.icon{
+            padding:30/@fs;
+            box-sizing: border-box;
+            text-align: center;
+            img{
+              width:32/@fs;
+            }
+          }
+          td{
+            height:122/@fs;
+            span{
+              color:#ff5a45;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 第五页
+.slide-5{
+  .slide-5-header{
+    width:275/@fs;
+    height:60/@fs;
+    margin:0 auto;
+    position:relative;
+    .backgroundImg('',"@{baseUrl}/user_report_5_01.png",100%);
+  }
+  dl{
+    margin-top:30/@fs;
+    dt{
+      text-align: center;
+      margin:20/@fs 0 10/@fs;
+      img{
+        height:32/@fs;
+        vertical-align: middle;
+      }
+      span{
+        font-size:30/@fs;
+        margin-left:10/@fs;
+        vertical-align: middle;
+      }
+    }
+    dd{
+      width:568/@fs;
+      height:157/@fs;
+      margin:0 auto;
+      font-size:24/@fs;
+      color:#fff;
+      text-align: center;
+      box-sizing: border-box;
+      line-height: 157/@fs;
+      .backgroundImg('',"@{baseUrl}/user_report_2_03.png",100%);
+      p.number{
+        span{
+          font-size:46/@fs;
+          color:#ff5a45;
+        }
+      }
+    }
+  }
+  .slide-5-footer{
+    width:566/@fs;
+    height:215/@fs;
+    margin:40/@fs auto 0;
+    text-align: center;
+    padding-top:43/@fs;
+    .backgroundImg('',"@{baseUrl}/user_report_5_03.png",100%);
+    h1{
+      font-size:32/@fs;
+    }
+    p{
+      margin-top:39/@fs;
+      font-size:28/@fs;
+      span{
+        color:#ff5a45;
+      }
+    }
+  }
+}
+
+
+// @media (min-height: 500/@fs) {
+//     .swiper-slide{
+//       padding-top:128/@fs;
+//     }
+// }
+
+// @media (min-height: 500/@fs) {
+//   .swiper-slide{
+//       padding-top:6%;
+//   }
+//   .slide-1{
+//     .slide-1-portrait{
+//       margin-top:5%;
+//     } 
+//     .slide-footer{
+//       margin-top:5%;
+//     }
+//   }
+//   .slide-2{
+//     dl{
+//       dt{
+//         margin:20/@fs 0 10/@fs;
+//       }
+//       dt.money{
+//         margin:30/@fs 0 10/@fs;
+//       }
+//     }
+//     p.footer{
+//       margin-top:30/@fs;
+//     }
+//   }
+//   .slide-3{
+//     .slide-3-main{
+//       margin:.10rem auto 0;
+//     }
+//     .footer{
+//       margin:.1rem auto 0;
+//     }
+//   }
+// }
+
+
+@keyframes turn{
+  0%{transform:rotateZ(0);}
+  100%{transform:rotateZ(360deg);}
+}
+@keyframes turn2{
+  0%{transform:rotateZ(0);}
+  100%{transform:rotateZ(-360deg);}
+}
+
+@keyframes explicitImplicit{
+  0%{opacity:0.3;}
+  50%{opacity: 1;}
+  100%{opacity: 0.3;}
+}
+
+
+
+
+
+
+
+
+// loading动画
+#loading{
+  position:fixed;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  background-color:#000;
+  z-index:888;
+  .sk-wave {
+    width: 100/@fs;
+    height: 120/@fs;
+    text-align: center;
+    font-size: 20/@fs; 
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:-40/@fs;
+    margin-left:-50/@fs;
+  }
+    .sk-wave .sk-rect {
+      background-color: lightgreen;
+      height: 100%;
+      width: 12/@fs;
+      border-radius:6/@fs;
+      display: inline-block;
+              animation: sk-waveStretchDelay 1.2s infinite ease-in-out; }
+    .sk-wave .sk-rect1 {
+              animation-delay: -1.2s; }
+    .sk-wave .sk-rect2 {
+              animation-delay: -1.1s; }
+    .sk-wave .sk-rect3 {
+              animation-delay: -1s; }
+    .sk-wave .sk-rect4 {
+              animation-delay: -0.9s; }
+    .sk-wave .sk-rect5 {
+              animation-delay: -0.8s; }
+
+  @-webkit-keyframes sk-waveStretchDelay {
+    0%, 40%, 100% {
+              transform: scaleY(0.4); background-color: lightgreen; }
+    20% {
+              transform: scaleY(1); background-color: lightblue;} }
+
+  @keyframes sk-waveStretchDelay {
+    0%, 40%, 100% {
+              transform: scaleY(0.4); background-color: lightgreen;}
+    20% {
+              transform: scaleY(1); background-color: lightblue;} }
+}
+
+
+
+// 动画
+.upIn{
+  transform:translate3d(0,-300/@fs,0);
+  opacity:0;
+  animation:upIn 1s;
+  animation-fill-mode: forwards;
+}
+.scaleIn{
+  opacity: 0;
+  transform:scale(0);
+  animation:scaleIn 2s;
+  animation-fill-mode: forwards;
+}
+.downIn{
+  opacity: 0;
+  transform:translate3d(0,100/@fs,0);
+  animation:downIn 1s;
+  animation-fill-mode: forwards;
+}
+.scaleIn2{
+  opacity: 0;
+  transform:scale(0);
+  animation:scaleIn2 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes upIn{
+  0%{}
+  100%{transform:translate3d(0,0,0);opacity:1;}
+}
+@keyframes scaleIn{
+  0%{}
+  100%{opacity:1;transform:scale(1);}
+}
+@keyframes downIn{
+  0%{}
+  100%{opacity:1;transform:translate3d(0,0,0);}
+}
+@keyframes scaleIn2{
+  0%{transform:scale(0,0);opacity:0}
+  40%{transform:scale(1.2,1.2);opacity:1}
+  70%{transform:scale(.9,.9);opacity:.8}
+  90%{transform:scale(1,1);opacity:.9}
+  100%{transform:scale(1,1);opacity:1}
+}
